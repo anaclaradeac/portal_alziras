@@ -1,3 +1,5 @@
+const BOXED_PAGES = ['alzirometro', 'trilhas', 'ebook'];
+
 function showPage(id, el) {
       document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
       document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
@@ -6,6 +8,8 @@ function showPage(id, el) {
       window.scrollTo(0, 0);
       // fecha o menu mobile após escolher
       document.querySelector('.navbar-tabs').classList.remove('active');
+
+      document.body.classList.toggle('petals-boxed-page', BOXED_PAGES.includes(id));
 }
 
 AOS.init({ duration: 700, once: true, offset: 80 });
@@ -58,4 +62,38 @@ function toggleTheme() {
     petal.style.animationDelay = (-Math.random() * fallDuration) + 's, ' + (-Math.random() * swayDuration) + 's';
     layer.appendChild(petal);
   }
+})();
+
+// ══ PÉTALAS NAS COLUNAS LATERAIS (Alzirômetro, Trilha, E-Book) ══
+(function () {
+  const colors = ['#a878d6', '#8456bf', '#7b3fa0', '#c79ef0'];
+
+  function petalSVG(color) {
+    return '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">' +
+      '<path d="M12 2 C 18 6, 20 14, 12 22 C 4 14, 6 6, 12 2 Z" fill="' + color + '"/>' +
+    '</svg>';
+  }
+
+  function fillColumn(col, count) {
+    if (!col) return;
+    for (let i = 0; i < count; i++) {
+      const petal = document.createElement('div');
+      petal.className = 'petal';
+      const size = 10 + Math.random() * 12;
+      petal.style.left = Math.random() * 100 + '%';
+      petal.style.width = size + 'px';
+      petal.style.height = size + 'px';
+      petal.style.opacity = (0.5 + Math.random() * 0.4).toFixed(2);
+      petal.innerHTML = petalSVG(colors[Math.floor(Math.random() * colors.length)]);
+      const fallDuration = 9 + Math.random() * 10;
+      const swayDuration = 3 + Math.random() * 3;
+      petal.style.animationDuration = fallDuration + 's, ' + swayDuration + 's';
+      petal.style.animationDelay = (-Math.random() * fallDuration) + 's, ' + (-Math.random() * swayDuration) + 's';
+      col.appendChild(petal);
+    }
+  }
+
+  // menos pétalas em telas estreitas, onde sobra pouco espaço lateral
+  const count = window.innerWidth < 900 ? 4 : 9;
+  document.querySelectorAll('.petals-col').forEach(col => fillColumn(col, count));
 })();
