@@ -497,6 +497,14 @@
         .petals-col-left { left: 0; }
         .petals-col-right { right: 0; }
         
+        .petals-col-content {
+          width: calc((100vw - 1100px) / 2);
+        }
+        
+        @media (max-width: 1220px) {
+          .petals-col-content { display: none; }
+        }
+
         .petals-col .petal {
           position: absolute;
           top: -5%;
