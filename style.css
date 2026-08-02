@@ -500,7 +500,44 @@
         .petals-col-content {
           width: calc((100vw - 1100px) / 2);
         }
+
+        /* ══ LARGURA DAS LATERAIS DE PÉTALAS, POR PÁGINA ══ */
+
+        /* Sobre — conteúdo mais denso (fotos, cards), laterais mais largas */
+        #page-sobre .petals-col-content {
+          width: calc((100vw - 900px) / 2);
+        }
         
+        /* Memória — texto longo, laterais um pouco mais estreitas */
+        #page-memoria .petals-col-content {
+          width: calc((100vw - 1100px) / 2);
+        }
+        
+        /* Mídia — cards de episódios, largura intermediária */
+        #page-midia .petals-col-content {
+          width: calc((100vw - 1000px) / 2);
+        }
+        
+        /* Notícias — texto corrido e denso, laterais mais estreitas */
+        #page-noticias .petals-col-content {
+          width: calc((100vw - 1150px) / 2);
+        }
+        
+        /* Alzirômetro — caixa pequena, laterais bem largas */
+        #page-alzirometro .petals-col {
+          width: calc((100vw - 500px) / 2);
+        }
+        
+        /* Trilha de Capacitação */
+        #page-trilhas .petals-col {
+          width: calc((100vw - 700px) / 2);
+        }
+        
+        /* E-Book */
+        #page-ebook .petals-col {
+          width: calc((100vw - 700px) / 2);
+        }
+
         @media (max-width: 1220px) {
           .petals-col-content { display: none; }
         }
