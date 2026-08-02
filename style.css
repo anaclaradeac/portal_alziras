@@ -510,7 +510,7 @@
         
         /* Memória — texto longo, laterais um pouco mais estreitas */
         #page-memoria .petals-col-content {
-          width: calc((100vw - 700px) / 2);
+          width: calc((100vw - 750px) / 2);
         }
         
         /* Mídia — cards de episódios, largura intermediária */
