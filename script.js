@@ -1,4 +1,4 @@
-const BOXED_PAGES = ['alzirometro', 'trilhas', 'ebook', 'memoria', 'midia', 'noticias'];
+const BOXED_PAGES = ['sobre','alzirometro', 'trilhas', 'ebook', 'memoria', 'midia', 'noticias'];
 
 function showPage(id, el) {
       document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
