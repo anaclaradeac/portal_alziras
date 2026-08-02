@@ -465,6 +465,11 @@
           color: #c9c3d6; /* um cinza claro, pra não ficar branco puro e continuar legível */
         }
 
+        body.dark-mode .stat-percent,
+        body.dark-mode .contact-card .c-value {
+          color: #ffffff;
+        }
+
         /* ══ PÉTALAS LILÁS CAINDO ══ */
         .petals-layer {
           position: fixed;
