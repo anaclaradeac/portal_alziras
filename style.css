@@ -476,24 +476,27 @@
 
         /* ══ COLUNAS DE PÉTALAS NAS PÁGINAS COM CAIXA CENTRALIZADA ══ */
         .alziro-wrap, .emdev-wrap {
-          align-items: stretch;   /* antes era center: agora as colunas ocupam a altura toda */
           position: relative;
-          overflow: hidden;
         }
         .alziro-box, .emdev-box {
-          align-self: center;     /* mantém a caixa centrada verticalmente como antes */
           position: relative;
           z-index: 2;
           border-color: #e0d0f0;
           box-shadow: 0 4px 24px rgba(168, 120, 214, 0.08);
         }
+        
         .petals-col {
-          flex: 1 1 0;
-          min-width: 0;
-          position: relative;
+          position: fixed;
+          top: 0;
+          height: 100vh;
+          width: calc((100vw - 600px) / 2);
           overflow: hidden;
           pointer-events: none;
+          z-index: 150;
         }
+        .petals-col-left { left: 0; }
+        .petals-col-right { right: 0; }
+        
         .petals-col .petal {
           position: absolute;
           top: -5%;
@@ -501,6 +504,10 @@
           animation-name: petal-fall, petal-sway;
           animation-timing-function: linear, ease-in-out;
           animation-iteration-count: infinite, infinite;
+        }
+        
+        @media (max-width: 760px) {
+          .petals-col { display: none; }
         }
         
         /* some quando essas páginas estão ativas, a camada global some */
