@@ -97,3 +97,5 @@ function toggleTheme() {
   const count = window.innerWidth < 900 ? 4 : 9;
   document.querySelectorAll('.petals-col').forEach(col => fillColumn(col, count));
 })();
+
+document.body.classList.add('petals-boxed-page');
