@@ -470,6 +470,14 @@
           color: #ffffff;
         }
 
+    body.dark-mode .media-link-btn {
+      color: #ffffff !important;
+    }
+    
+    body.dark-mode .stat-label {
+      color: #ffffff;
+    }
+
         /* ══ PÉTALAS LILÁS CAINDO ══ */
         .petals-layer {
           position: fixed;
