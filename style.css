@@ -420,8 +420,13 @@
         body.dark-mode .memoria-text-block p,
         body.dark-mode .memoria-text-block ul,
         body.dark-mode .news-hero-body p,
+        body.dark-mode .media-intro,  
         body.dark-mode .ep-guests { color: #ffffff; }
-        
+
+        body.dark-mode #page-midia h3 {
+          color: #ffffff !important;
+        }
+                
         body.dark-mode .alziro-box,
         body.dark-mode .emdev-box,
         body.dark-mode .obj-card,
@@ -442,6 +447,23 @@
         body.dark-mode .site-footer { background: #1c1926; border-top-color: #2a2536; }
         body.dark-mode .footer-contact-item { color: #ffffff; }
         body.dark-mode .navbar-tabs { background: #1c1926; }
+
+        /* Fundo das páginas "caixa central" (Alzirômetro, Trilha, E-Book) */
+        body.dark-mode .alziro-wrap,
+        body.dark-mode .emdev-wrap {
+          background: #14121a;
+        }
+        
+        /* Título e texto de descrição dentro dessas caixas */
+        body.dark-mode .alziro-box h2,
+        body.dark-mode .emdev-box h2 {
+          color: #ffffff;
+        }
+        
+        body.dark-mode .alziro-box p,
+        body.dark-mode .emdev-box p {
+          color: #c9c3d6; /* um cinza claro, pra não ficar branco puro e continuar legível */
+        }
 
         /* ══ PÉTALAS LILÁS CAINDO ══ */
         .petals-layer {
