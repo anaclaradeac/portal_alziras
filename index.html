@@ -9,6 +9,18 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <symbol id="mini-rose" viewBox="0 0 44 44">
+      <g class="petal-g"><ellipse cx="22" cy="11" rx="6" ry="9.5" fill="#a878d6"/></g>
+      <g class="petal-g" transform="rotate(72 22 22)"><ellipse cx="22" cy="11" rx="6" ry="9.5" fill="#c79ef0"/></g>
+      <g class="petal-g" transform="rotate(144 22 22)"><ellipse cx="22" cy="11" rx="6" ry="9.5" fill="#a878d6"/></g>
+      <g class="petal-g" transform="rotate(216 22 22)"><ellipse cx="22" cy="11" rx="6" ry="9.5" fill="#c79ef0"/></g>
+      <g class="petal-g" transform="rotate(288 22 22)"><ellipse cx="22" cy="11" rx="6" ry="9.5" fill="#a878d6"/></g>
+      <circle class="center-dot" cx="22" cy="22" r="4" fill="#7b3fa0"/>
+    </symbol>
+  </defs>
+</svg>
   
   <!-- NAVBAR -->
   <nav class="navbar">
@@ -41,7 +53,11 @@
           <div class="alziras-logo-wrap" data-aos="zoom-in">
             <img src="images/alziras-hero-logo.png" alt="Logo Portal Alziras">
           </div>
-          <span class="eyebrow alziras-title">Portal Alziras</span>
+          <div class="title-with-flowers">
+            <svg class="bloom-flower" viewBox="0 0 44 44" aria-hidden="true"><use href="#mini-rose"/></svg>
+            <span class="eyebrow alziras-title">Portal Alziras</span>
+            <svg class="bloom-flower" viewBox="0 0 44 44" aria-hidden="true"><use href="#mini-rose"/></svg>
+          </div>
 
           <div class="alziras-intro" data-aos="fade-up">
             <p class="lead">Em 1929, em Lajes, no interior potiguar, Alzira Soriano de Nóbrega tornou-se a primeira prefeita eleita na América Latina. Quase um século depois, sua trajetória ainda inspira uma pergunta urgente: por que as mulheres continuam sub-representadas nos espaços de decisão política?</p>
