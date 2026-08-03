@@ -1,5 +1,15 @@
 const BOXED_PAGES = ['sobre','alzirometro', 'trilhas', 'ebook', 'memoria', 'midia', 'noticias'];
 
+// ══ ALTURA REAL DO NAVBAR, PARA AS PÉTALAS COMEÇAREM ABAIXO DELE ══
+function updateNavbarHeight() {
+  const nav = document.querySelector('.navbar');
+  if (nav) {
+    document.documentElement.style.setProperty('--navbar-height', nav.offsetHeight + 'px');
+  }
+}
+updateNavbarHeight();
+window.addEventListener('resize', updateNavbarHeight);
+
 function showPage(id, el) {
       document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
       document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
