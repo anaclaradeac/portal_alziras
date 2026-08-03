@@ -109,3 +109,10 @@ function toggleTheme() {
 })();
 
 document.body.classList.add('petals-boxed-page');
+
+// ══ FLORES DESABROCHANDO NO TÍTULO (ao abrir o site) ══
+window.addEventListener('DOMContentLoaded', () => {
+  setTimeout(() => {
+    document.querySelectorAll('.bloom-flower').forEach(f => f.classList.add('bloomed'));
+  }, 400);
+});
