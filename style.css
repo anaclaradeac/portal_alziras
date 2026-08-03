@@ -84,7 +84,13 @@
     .memoria-card:hover { box-shadow: 0 8px 28px rgba(168,120,214,0.18); transform: translateY(-4px); border-color: #a878d6; }
     .memoria-card .card-icon { width: 48px; height: 48px; background: #f5eefc; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 12px; transition: background 0.25s; }
     .memoria-card:hover .card-icon { background: #a878d6; }
-    .memoria-card:hover .card-icon svg path, .memoria-card:hover .card-icon svg rect, .memoria-card:hover .card-icon svg circle, .memoria-card:hover .card-icon svg polyline, .memoria-card:hover .card-icon svg polygon { stroke: #fff; }
+    .memoria-card:hover .card-icon svg * {
+      stroke: #fff;
+      fill: #fff;
+    }
+    .memoria-card:hover .card-icon svg [fill="none"] {
+      fill: none;
+    }
     .memoria-card h3 { font-size: 13px; font-weight: 700; color: #333; margin: 0 0 6px; }
     .memoria-card p { font-size: 11px; color: #888; margin: 0; line-height: 1.6; }
 
@@ -420,7 +426,9 @@
         body.dark-mode .memoria-text-block ul,
         body.dark-mode .news-hero-body p,
         body.dark-mode .media-intro,  
-        body.dark-mode .ep-guests { color: #ffffff; }
+        body.dark-mode .ep-guests,
+        body.dark-mode .alziro-box p,
+        body.dark-mode .emdev-box p { color: #ffffff; }
 
         body.dark-mode #page-midia h3 {
           color: #ffffff !important;
@@ -594,3 +602,43 @@
         
         /* some quando essas páginas estão ativas, a camada global some */
         body.petals-boxed-page .petals-layer { display: none; }
+
+        /* ══ FLORES DESABROCHANDO NO TÍTULO ══ */
+        .title-with-flowers{
+          display:flex;
+          align-items:center;
+          justify-content:center;
+          gap:16px;
+          flex-wrap:wrap;
+        }
+        .bloom-flower{ width:40px; height:40px; flex-shrink:0; }
+        .bloom-flower .petal-g{
+          transform-origin:22px 22px;
+          transform: scale(.2) rotate(-30deg);
+          opacity:0;
+          transition: transform 1s cubic-bezier(.22,1,.36,1), opacity 1s ease;
+        }
+        .bloom-flower.bloomed .petal-g{ transform: scale(1) rotate(0deg); opacity:1; }
+        .bloom-flower .petal-g:nth-child(1){ transition-delay:.15s; }
+        .bloom-flower .petal-g:nth-child(2){ transition-delay:.23s; }
+        .bloom-flower .petal-g:nth-child(3){ transition-delay:.31s; }
+        .bloom-flower .petal-g:nth-child(4){ transition-delay:.39s; }
+        .bloom-flower .petal-g:nth-child(5){ transition-delay:.47s; }
+        .bloom-flower .center-dot{
+          transform-origin:22px 22px;
+          transform: scale(0);
+          transition: transform .5s ease .65s;
+        }
+        .bloom-flower.bloomed .center-dot{ transform: scale(1); }
+        
+        @media (prefers-reduced-motion: reduce){
+          .bloom-flower .petal-g, .bloom-flower .center-dot{
+            transition:none !important;
+            transform:none !important;
+            opacity:1 !important;
+          }
+        }
+        
+        @media (max-width: 600px){
+          .bloom-flower{ width:30px; height:30px; }
+        }
