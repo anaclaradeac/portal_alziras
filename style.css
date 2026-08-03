@@ -79,7 +79,7 @@
     .memoria-text-block ul { font-size: 14px; color: #555; line-height: 1.8; margin: 0 0 14px 1.4rem; }
     .memoria-text-block ul li { margin-bottom: 4px; }
 
-    .memoria-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; max-width: 1000px; margin: 0 auto; }
+    .memoria-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; max-width: 1000px; margin: 0 auto; }
     .memoria-card { display: flex; flex-direction: column; align-items: center; text-align: center; background: #fff; border: 1px solid #eee; border-radius: 8px; padding: 24px 16px 20px; text-decoration: none !important; color: inherit !important; transition: box-shadow 0.25s, transform 0.25s, border-color 0.25s; }
     .memoria-card:hover { box-shadow: 0 8px 28px rgba(168,120,214,0.18); transform: translateY(-4px); border-color: #a878d6; }
     .memoria-card .card-icon { width: 48px; height: 48px; background: #f5eefc; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 12px; transition: background 0.25s; }
@@ -410,8 +410,7 @@
         body.dark-mode .news-hero-body h3,
         body.dark-mode .alzira-card h2,
         body.dark-mode .alzira-card p,
-        body.dark-mode .ep-title,
-        body.dark-mode .alzira-highlight span { color: #ffffff; }
+        body.dark-mode .ep-title span { color: #ffffff; }
         
         body.dark-mode .sec-header p,
         body.dark-mode .about-text p,
