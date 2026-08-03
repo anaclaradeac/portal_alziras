@@ -84,7 +84,7 @@
     .memoria-card:hover { box-shadow: 0 8px 28px rgba(168,120,214,0.18); transform: translateY(-4px); border-color: #a878d6; }
     .memoria-card .card-icon { width: 48px; height: 48px; background: #f5eefc; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 12px; transition: background 0.25s; }
     .memoria-card:hover .card-icon { background: #a878d6; }
-    .memoria-card:hover .card-icon svg path, .memoria-card:hover .card-icon svg rect, .memoria-card:hover .card-icon svg circle, .memoria-card:hover .card-icon svg polyline, .memoria-card:hover .card-icon svg line { stroke: #fff; }
+    .memoria-card:hover .card-icon svg path, .memoria-card:hover .card-icon svg rect, .memoria-card:hover .card-icon svg circle, .memoria-card:hover .card-icon svg polyline, .memoria-card:hover .card-icon svg polygon { stroke: #fff; }
     .memoria-card h3 { font-size: 13px; font-weight: 700; color: #333; margin: 0 0 6px; }
     .memoria-card p { font-size: 11px; color: #888; margin: 0; line-height: 1.6; }
 
