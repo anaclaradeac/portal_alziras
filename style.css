@@ -61,7 +61,7 @@
     .partners-grid { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 24px; }
     .partner-logo { display: flex; align-items: center; justify-content: center; background: #fff; border: 1px solid #eee; border-radius: 8px; padding: 36px 60px; transition: box-shadow 0.25s, transform 0.25s, border-color 0.25s; text-decoration: none; }
     .partner-logo:hover { box-shadow: 0 8px 28px rgba(168,120,214,0.18); transform: translateY(-4px); border-color: #a878d6; }
-    .partner-logo img { max-height: 72px; max-width: 220px; width: auto; height: auto; }
+    .partner-logo img { max-height: 72px; max-width: 220px; width: auto; height: auto; background-color: #ffffff; padding: 10px; border-radius: 6px; }
 
     /* ══ ALZIRÔMETRO ══ */
     .alziro-wrap { min-height: 80vh; display: flex; align-items: center; justify-content: center; padding: 60px 20px; background: #f9f9f9; }
